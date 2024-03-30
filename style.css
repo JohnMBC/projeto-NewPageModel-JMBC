@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --color-first: black;
+    --color-second: white;
+    --color-third: rgb(0, 255, 221);
+    --color-fourth: gray;
+    --color-fifth: rgb(221, 111, 80);
+    --color-sixth: rgba(66, 66, 225, 0.467);
+    --color-background-menu: rgb(192, 241, 245);
+    --font-main: 'Montserrat', sans-serif;
+    --font-second: Verdana, 'Geneva', Tahoma, sans-serif;
+
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-main);
+    color: var(--color-first);
+}
+
+
+.header-container {
+
+    border: 2px solid var(--color-first);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    width: 1050;
+    padding: 0 5%;
+    background-color: var(--color-second);
+    background-image: url(./img/nova\ eu\ e\ toto\ new.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+    box-sizing: border-box;
+    position: relative;
+}
+
+h1 {
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+h2 {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.social-media {
+    margin-top: 1rem;
+    display: flex;
+
+}
+
+.social-media a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 4rem;
+    border: 2px solid var(--color-first);
+    border-radius: 4px;
+    min-width: 4rem;
+    transition: .5s ease-in-out;
+    text-decoration: none;
+    color: var(--color-first);
+}
+
+a:hover {
+    background-color: var(--color-background-menu);
+}
+
+.checkbox-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkbox {
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    z-index: 9999;
+    transition: 400ms ease-in-out 0s;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.checkbox .trace {
+    width: 50px;
+    height: 2px;
+    background-color: var(--color-first);
+    position: absolute;
+    border-radius: 4px;
+    transition: 0.5s ease-in-out;
+}
+
+.checkbox .trace:nth-child(1) {
+    top: 26px;
+    transform: rotate(1);
+}
+
+.checkbox .trace:nth-child(2) {
+    top: 46px;
+    transform: rotate(2);
+}
+
+.checkbox .trace:nth-child(3) {
+    top: 66px;
+    transform: rotate(3);
+}
+
+#toggle {
+    display: none;
+}
+
+.menu {
+    position: absolute;
+    top: 28px;
+    width: 10px;
+    background-color: var(--color-background-menu);
+    height: 4px;
+    right: 30px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 0px 0px white;
+    z-index: -1;
+    transition: 400ms ease-in-out 0s;
+}
+
+.menu-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: 400ms ease-in-out 0s;
+}
+
+.menu-items ul {
+    list-style-type: none;
+}
+
+.menu-items ul li a {
+    margin: 10px 0;
+    color: var(--color-first);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 40px;
+}
+
+#toggle:checked+.checkbox .trace:nth-child(1) {
+    transform: rotate(45deg);
+    top: 47px;
+}
+
+#toggle:checked+.checkbox .trace:nth-child(2) {
+    transform: translate(-100px);
+    width: 30px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#toggle:checked+.checkbox .trace:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 48px;
+}
+
+#toggle:checked+.checkbox {
+    background-color: var(--color-second);
+}
+
+#toggle:checked~.menu {
+    box-shadow: 0px 0px 0px 100vmax var(--color-second);
+    z-index: 1;
+}
+
+#toggle:checked~.menu-items {
+    visibility: visible;
+    opacity: 1;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: auto;
+    width: 100%;
+    margin: 3rem 0;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 90%;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    margin: 3rem 0 0 0;
+    background-color: var(--color-fifth);
+    background-image: url(./img/nova\ eu\ e\ toto\ new.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: grayscale(0.5);
+    color: var(--color-first);
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+.card-text {
+    letter-spacing: 1px;
+    width: 40%;
+    color: var(--color-sixth);
+}
+
+.card-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    position: relative;
+}
+
+
+.card-wrapper::before {
+    position: absolute;
+    content: '';
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: block;
+    border: 1px solid var(--color-second);
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+}
+
+.card-wrapper h2 {
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin: 0;
+    transition: 0.5s ease-in-out;
+}
+
+.card-wrapper p {
+    font-size: 0;
+    visibility: visible;
+    opacity: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.5s ease-in-out;
+}
+
+.card:hover {
+    filter: unset;
+}
+
+
+.card:hover>.card-wrapper::before {
+    width: 200px;
+    height: 200px;
+    opacity: 1;
+}
+
+.card:hover>.card-wrapper p {
+    opacity: 1;
+    visibility: visible;
+    font-size: 14px;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-first);
+    width: 100%;
+    height: 100px;
+    background-color: var(--color-fifth);
+
+}
