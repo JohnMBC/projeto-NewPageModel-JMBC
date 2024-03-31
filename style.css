@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+
+
 :root {
     --color-first: black;
     --color-second: white;
@@ -10,8 +12,6 @@
     --color-background-menu: rgb(192, 241, 245);
     --font-main: 'Montserrat', sans-serif;
     --font-second: Verdana, 'Geneva', Tahoma, sans-serif;
-
-
 }
 
 body {
@@ -32,13 +32,13 @@ body {
     height: 100vh;
     width: 1050;
     padding: 0 5%;
-    background-color: var(--color-second);
     background-image: url(./img/nova\ eu\ e\ toto\ new.jpg);
     background-repeat: no-repeat;
     background-position: right;
     background-size: contain;
     box-sizing: border-box;
     position: relative;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 h1 {
@@ -298,6 +298,27 @@ a:hover {
     color: var(--color-first);
     width: 100%;
     height: 100px;
-    background-color: var(--color-fifth);
-
+    background: linear-gradient(45deg, #ff0000, #ff7700, #ffff00, #00ff00, #0000ff, #8a2be2, #9400d3);
 }
+
+@media screen and (max-width: 600px) {
+    body {
+        background-color: rgb(211, 234, 137);
+        /* Cor para telas pequenas */
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1200px) {
+    body {
+        background-color: rgba(174, 218, 174, 0.949);
+        /* Cor para telas médias */
+    }
+}
+
+@media screen and (min-width: 1201px) {
+    body {
+        background-color: rgba(234, 179, 234, 0.815);
+        /* Cor para telas grandes */
+    }
+}
+ 
