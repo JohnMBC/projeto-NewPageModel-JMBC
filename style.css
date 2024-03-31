@@ -232,7 +232,8 @@ a:hover {
 .card-text {
     letter-spacing: 1px;
     width: 40%;
-    color: var(--color-sixth);
+    color: var(--color-first);
+    font-weight: bold;
 }
 
 .card-wrapper {
